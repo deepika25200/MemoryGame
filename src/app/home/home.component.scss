@@ -1,0 +1,59 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    background-color:black;
+     height:740px;
+     margin: -8px;
+    padding: 0;
+  }
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+    font-family: 'Rubik Glitch', system-ui;
+    color: rgb(244, 18, 18); /* Set text color to white for better readability on a black background */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    text-align: center;
+}
+h1
+{
+  font-family: 'Bungee Inline', sans-serif;
+    font-size: 100px;
+    text-align: center;
+    margin: 0;
+    animation: bounce 1s ease-in-out infinite;  
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-20px);
+  }
+  60% {
+      transform: translateY(-10px);
+  }
+}
+a
+{
+  color: white;
+   text-decoration: none; 
+   display: inline-block;
+   margin: 10px;
+   padding:15px 30px; 
+   border: 2px solid #ff0000; 
+   width: 150px;
+   text-align: center;
+   border-radius: 10px; 
+   background: rgba(255, 0, 0, 0.2); 
+   transition: background 0.3s;
+}
+a:hover {
+  border-width: 4px; /* Increase the border width on hover */
+  border-color: red; /* Change the border color to red on hover */
+  background-color: darkred;
+}

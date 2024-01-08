@@ -1,0 +1,5 @@
+<div class="card" [class.flipped]="isFlipped" [class.matched]="isMatched" (click)="handleCardClick()">
+    <div class="card-inner">
+      <img [src]="isFlipped ? card : 'https://cdn.vectorstock.com/i/1000x1000/01/54/devil-mask-in-black-background-and-red-lineart-vector-35160154.webp'" alt="Card Image"/>
+    </div>
+  </div>

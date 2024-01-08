@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  isClicked:boolean = false;
+  clicked():void
+  {
+    this.isClicked=true
+  }
   title = 'MemoryGames';
 }

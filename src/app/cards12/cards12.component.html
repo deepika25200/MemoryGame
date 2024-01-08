@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div>
+    <nav>
+      <i class="fa fa-home" style="font-size:30px;color:white;"></i>
+    <a routerLink="/" >HOME</a>
+  </nav>
+</div>
+<div class="card-grid">
+  <app-card *ngFor="let card of cards; let i = index"
+            [ngClass]="{'matched': card.matched}"
+            [card]="card.image"
+            [isFlipped]="flippedCardIndices.includes(i)"
+            [isMatched]="matchedCardIndices.includes(i)"
+            (cardClicked)="handleCardClick(i, card)">
+  </app-card>
+  </div>
+  <br><br>
+  <div id="footer">
+  <p>Moves: {{ moves }}</p>
+  <p>Misses: {{ misses }}</p>
+  <p>Rounds Played: {{ roundsPlayed }}</p>
+  <p>Knowledge Points: {{ knowledgePoints }}</p>
+  <p>Accuracy: {{ accuracy }}%</p>
+  </div>
+  <div class="overlay" id="overlay">
+    <div class="modal" id="modal">
+      <div class="celebration-gif">
+    <div id="display">
+      <div class="celebration-gif">
+    <p>Moves: {{ moves }}</p>
+    <p>Misses: {{ misses }}</p>
+    <p>Rounds Played: {{ roundsPlayed }}</p>
+    <p>Knowledge Points: {{ knowledgePoints }}</p>
+    <p>Accuracy: {{ accuracy }}%</p>
+  </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
